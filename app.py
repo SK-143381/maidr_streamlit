@@ -156,7 +156,7 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs([
 
 # Practice tab
 with tab1:
-    st.header("Practice with Your Own Data")
+    st.header("Create your own Custom Plot")
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
     
     if uploaded_file is not None:
