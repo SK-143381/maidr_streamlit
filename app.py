@@ -528,15 +528,7 @@ with tab9:
     
     col1, col2 = st.columns([1, 3])
     with col1:
-        multipanel_layout = st.selectbox(
-            "Select layout type:",
-            [
-                "Grid 2x2",
-                "Column",
-                "Row"
-            ],
-            key='multipanel_layout'
-        )
+        # Removed the layout dropdown
         multipanel_color = st.selectbox(
             "Select color palette:",
             [
@@ -551,8 +543,8 @@ with tab9:
         )
     
     with col2:
-        # Create and render the multipanel plot
-        ax = create_multipanel_plot(multipanel_layout, multipanel_color, theme)
+        # Create and render the multipanel plot with fixed layout (removed layout parameter)
+        ax = create_multipanel_plot("Grid 2x2", multipanel_color, theme)
         render_maidr_plot(ax)
 
 # Multiline Plot tab
